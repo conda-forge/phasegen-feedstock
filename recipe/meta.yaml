@@ -1,5 +1,5 @@
 {% set name = "phasegen" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasegen-{{ version }}.tar.gz
-  sha256: 0ad714062d2b43c7ee8b03dc48bbb545e75af99af2f03ca52c0001a906c962b8
+  sha256: 69eb7746fdc9b25c70106456b4b02f22b8a6651a935261ba370a135c11804a69
 
 build:
   noarch: python
