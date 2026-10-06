@@ -1,6 +1,6 @@
 {% set name = "phasegen" %}
 {% set version = "2.0.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -29,10 +29,11 @@ requirements:
     - pandas >=2.2.2,<3.0.0
     - jsonpickle >=3.0.4,<4.0.0
     - multiprocess >=0.70.16,<0.71.0
+    - dill >=0.3.8
     - pyyaml >=6.0.1,<7.0.0
     - tqdm >=4.66.2,<5.0.0
     - scipy >=1.13.0,<2.0.0
-    - fastdfe >=1.1.5
+    - sfsutils >=1.0.0,<2.0.0
     - numba >=0.59
 
 test:
