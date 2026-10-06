@@ -1,14 +1,14 @@
 {% set name = "phasegen" %}
-{% set version = "1.2.0" %}
-{% set python_min = "3.10" %}
+{% set version = "2.0.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasegen-{{ version }}.tar.gz
-  sha256: 69eb7746fdc9b25c70106456b4b02f22b8a6651a935261ba370a135c11804a69
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/phasegen-{{ version }}.tar.gz
+  sha256: a410a5a5c9d187a3036aaf4bb416c364b0e9dfdc6e407697a502feae6c3c2e41
 
 build:
   noarch: python
@@ -29,10 +29,11 @@ requirements:
     - pandas >=2.2.2,<3.0.0
     - jsonpickle >=3.0.4,<4.0.0
     - multiprocess >=0.70.16,<0.71.0
+    - dill >=0.3.8
     - pyyaml >=6.0.1,<7.0.0
     - tqdm >=4.66.2,<5.0.0
     - scipy >=1.13.0,<2.0.0
-    - fastdfe >=1.1.5
+    - sfsutils >=1.0.0,<2.0.0
     - numba >=0.59
 
 test:
