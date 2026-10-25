@@ -1,5 +1,5 @@
 {% set name = "phasegen" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/phasegen-{{ version }}.tar.gz
-  sha256: 49cecceba6e322998e88d59b995faf1ad7e6a1a277edb2949db3b6db7b4105b4
+  sha256: bb880563b2a8e617d23788519b04dc10600e550d38a35d1ad3c8340c490b4fb9
 
 build:
   noarch: python
@@ -21,20 +21,21 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }},<3.15
     - typing_extensions >=4.11.0,<5.0.0
     - matplotlib-base >=3.8.4,<4.0.0
     - seaborn >=0.13.2,<0.14.0
     - numpy >=1.26.4
-    - pandas >=2.2.2,<3.0.0
-    - jsonpickle >=3.0.4,<4.0.0
+    - pandas >=2.2.2,<4
+    - jsonpickle >=3.0.4,<5
     - multiprocess >=0.70.16,<0.71.0
     - dill >=0.3.8
     - pyyaml >=6.0.1,<7.0.0
     - tqdm >=4.66.2,<5.0.0
     - scipy >=1.13.0,<2.0.0
-    - sfsutils >=1.0.0,<2.0.0
+    - sfsutils >=1.1.2,<2.0.0
     - numba >=0.59
+    - threadpoolctl >=3.5
 
 test:
   imports:
