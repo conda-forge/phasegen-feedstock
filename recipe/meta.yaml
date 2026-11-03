@@ -1,5 +1,5 @@
 {% set name = "phasegen" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/phasegen-{{ version }}.tar.gz
-  sha256: bb880563b2a8e617d23788519b04dc10600e550d38a35d1ad3c8340c490b4fb9
+  sha256: b17728e737fea876f2adde60cd9c4418f7d4b9becf50bea70bf47d61d513a1bc
 
 build:
   noarch: python
@@ -23,11 +23,11 @@ requirements:
   run:
     - python >={{ python_min }},<3.15
     - typing_extensions >=4.11.0,<5.0.0
-    - matplotlib-base >=3.8.4,<4.0.0
+    - matplotlib-base >=3.9.0,<4.0.0
     - seaborn >=0.13.2,<0.14.0
     - numpy >=1.26.4
     - pandas >=2.2.2,<4
-    - jsonpickle >=3.0.4,<5
+    - jsonpickle >=3.4.2,<5
     - multiprocess >=0.70.16,<0.71.0
     - dill >=0.3.8
     - pyyaml >=6.0.1,<7.0.0
